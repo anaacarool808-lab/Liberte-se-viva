@@ -15,39 +15,73 @@ gtag('config', 'G-D821D9JCR0');
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <title>Reprogramação Mental | Destrave sua vida</title>
-<meta name="description" content="Você não está travada por falta de esforço. Aprenda a reprogramar sua mente e mudar seus resultados." />
+<meta name="description" content="Aprenda a reprogramar sua mente, quebrar padrões e transformar seus resultados. Acesso imediato." />
 
 <style>
-:root{
---bg:#070B12;
---card: rgba(255,255,255,.06);
---stroke: rgba(255,255,255,.12);
---text:#EAF0FF;
---muted:#B9C3D9;
---good:#22c55e;
---good2:#16a34a;
-}
 body{
 margin:0;
 font-family: Arial;
-background:var(--bg);
-color:var(--text);
+background:#070B12;
+color:#fff;
 }
-.wrap{max-width:1000px;margin:auto;padding:20px}
-.card{
-background:var(--card);
-border:1px solid var(--stroke);
-border-radius:16px;
+
+.wrap{
+max-width:1000px;
+margin:auto;
 padding:20px;
-margin-top:16px;
 }
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:16px;
+margin-top:20px;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+h1{
+font-size:34px;
+line-height:1.2;
+}
+
+h2{
+margin-top:0;
+}
+
+img{
+width:100%;
+border-radius:12px;
+margin-bottom:15px;
+}
+
 .btn{
-background:linear-gradient(180deg,var(--good),var(--good2));
-padding:14px;
-border-radius:10px;
-display:inline-block;
+display:block;
+text-align:center;
+padding:16px;
+border-radius:12px;
 font-weight:bold;
-margin-top:10px;
+background:linear-gradient(180deg,#22c55e,#16a34a);
+margin-top:15px;
+font-size:16px;
+}
+
+.badge{
+background:#22c55e;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+display:inline-block;
+margin-bottom:10px;
+}
+
+.price{
+font-size:28px;
+font-weight:bold;
+}
+
+.strike{
+text-decoration:line-through;
+opacity:0.6;
 }
 </style>
 
@@ -66,76 +100,134 @@ fbq('init', '1994362851483650');
 fbq('track', 'PageView');
 </script>
 
+<script>
+function trackClick(){
+  fbq('track', 'InitiateCheckout');
+  gtag('event', 'conversion', {
+    'event_category': 'clique',
+    'event_label': 'botao_compra'
+  });
+}
+</script>
+
 </head>
 
 <body>
 
 <div class="wrap">
 
+<!-- HERO -->
 <div class="card">
 
+<span class="badge">⚡ Método prático e direto</span>
+
+<img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+
 <h1>Você não está travada por falta de esforço…<br>
-está presa em um padrão mental que se repete todos os dias.</h1>
+está presa em um padrão mental.</h1>
 
 <p>
 Você tenta mudar… mas volta pro mesmo lugar.<br><br>
 
 O dinheiro não evolui.<br>
 A ansiedade continua.<br>
-E parece que algo sempre trava sua vida.<br><br>
-
-A verdade é simples:<br>
-se sua mente não muda, nada muda.
+E parece que algo sempre trava sua vida.
 </p>
 
-<a class="btn" href="https://sun.eduzz.com/E05XQOYNWX" target="_blank">
+<a class="btn" onclick="trackClick()" href="https://sun.eduzz.com/E05XQOYNWX" target="_blank">
 🔥 Quero destravar minha vida agora
 </a>
 
 </div>
 
+<!-- PROBLEMA -->
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+
+<h2>O problema não é você</h2>
+
+<p>
+O problema é o padrão que você repete todos os dias.<br><br>
+
+Sem perceber, sua mente te mantém no mesmo lugar.
+</p>
+
+</div>
+
+<!-- BENEFÍCIOS -->
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d">
 
 <h2>O que você vai aprender</h2>
 
 <ul>
-<li>Como identificar padrões mentais</li>
-<li>Como parar a autossabotagem</li>
-<li>Como criar novos hábitos</li>
-<li>Plano prático de 7 dias</li>
+<li>Identificar padrões mentais</li>
+<li>Parar a autossabotagem</li>
+<li>Criar novos hábitos</li>
+<li>Plano de 7 dias prático</li>
 </ul>
 
-<a class="btn" href="https://sun.eduzz.com/E05XQOYNWX" target="_blank">
+<a class="btn" onclick="trackClick()" href="https://sun.eduzz.com/E05XQOYNWX">
 Quero começar agora
 </a>
 
 </div>
 
+<!-- PROVA SOCIAL -->
 <div class="card">
 
-<h2>Oferta de hoje</h2>
+<h2>Resultados reais</h2>
 
-<p><strong>De R$29,90 por apenas R$9,99</strong></p>
+<p>
+✔ Mais clareza mental<br>
+✔ Mais controle emocional<br>
+✔ Mais foco e direção<br>
+</p>
+
+</div>
+
+<!-- OFERTA -->
+<div class="card">
+
+<h2>Oferta especial</h2>
+
+<p class="strike">De R$29,90</p>
+<p class="price">Por apenas R$9,99</p>
 
 <p>⚡ Acesso imediato</p>
 
-<a class="btn" href="https://sun.eduzz.com/E05XQOYNWX" target="_blank">
+<a class="btn" onclick="trackClick()" href="https://sun.eduzz.com/E05XQOYNWX">
 🔥 Garantir acesso agora
 </a>
 
 </div>
 
+<!-- GARANTIA -->
 <div class="card">
 
-<h2>Última decisão</h2>
+<h2>Garantia</h2>
 
 <p>
-Você pode continuar como está… ou começar hoje.<br><br>
-
-Nada muda se você não mudar.
+Você pode testar.<br>
+Se não gostar, pode pedir reembolso.
 </p>
 
-<a class="btn" href="https://sun.eduzz.com/E05XQOYNWX" target="_blank">
+</div>
+
+<!-- FINAL -->
+<div class="card">
+
+<h2>Decisão final</h2>
+
+<p>
+Se nada mudar… tudo continua igual.<br><br>
+
+Mas você pode começar hoje.
+</p>
+
+<a class="btn" onclick="trackClick()" href="https://sun.eduzz.com/E05XQOYNWX">
 Quero mudar minha vida agora
 </a>
 
