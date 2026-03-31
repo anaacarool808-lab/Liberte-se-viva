@@ -14,46 +14,82 @@ gtag('config', 'G-D821D9JCR0');
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<title>Reprogramação Mental</title>
+<title>E-book Reprogramação Mental</title>
 
 <style>
+:root{
+--bg:#070B12;
+--card: rgba(255,255,255,.05);
+--stroke: rgba(255,255,255,.12);
+--text:#EAF0FF;
+--muted:#B9C3D9;
+--good:#22c55e;
+--good2:#16a34a;
+}
+
 body{
 margin:0;
 font-family: Arial;
-background:#070B12;
-color:white;
+background:var(--bg);
+color:var(--text);
 }
-.wrap{max-width:900px;margin:auto;padding:20px}
+
+.wrap{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+
 .card{
-background:rgba(255,255,255,0.05);
+background:var(--card);
+border:1px solid var(--stroke);
 padding:25px;
 border-radius:16px;
 margin-top:20px;
-border:1px solid rgba(255,255,255,0.1);
 }
-img{width:100%;border-radius:12px;margin-bottom:15px}
-h1{font-size:34px}
+
+img{
+width:100%;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+h1{
+font-size:32px;
+line-height:1.2;
+}
+
 .btn{
-background:linear-gradient(180deg,#22c55e,#16a34a);
-padding:16px;
 display:block;
 text-align:center;
+padding:16px;
 border-radius:12px;
 font-weight:bold;
+background:linear-gradient(180deg,var(--good),var(--good2));
 margin-top:15px;
 }
+
 .badge{
 background:#22c55e;
 padding:6px 10px;
 border-radius:8px;
 font-size:12px;
 display:inline-block;
+margin-bottom:10px;
 }
-.price{font-size:28px;font-weight:bold}
-.strike{text-decoration:line-through;opacity:0.6}
+
+.price{
+font-size:28px;
+font-weight:bold;
+}
+
+.strike{
+text-decoration:line-through;
+opacity:0.6;
+}
 </style>
 
-<!-- Pixel -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -71,6 +107,7 @@ fbq('track', 'PageView');
 <script>
 function trackClick(){
   fbq('track', 'InitiateCheckout');
+  gtag('event', 'click_compra');
 }
 </script>
 
@@ -83,22 +120,23 @@ function trackClick(){
 <!-- HERO -->
 <div class="card">
 
-<span class="badge">⚡ Método simples e prático</span>
+<span class="badge">⚡ Método simples e direto</span>
 
 <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
 
-<h1>Você sente que sua vida não sai do lugar… mesmo tentando?</h1>
+<h1>Você sente que sua vida está travada…<br>
+mesmo tentando mudar?</h1>
 
 <p>
 Você começa motivada…<br>
 mas perde o foco.<br><br>
 
-Tenta mudar…<br>
+Tenta evoluir…<br>
 mas volta pro mesmo padrão.
 </p>
 
-<a class="btn" onclick="trackClick()" href="https://sun.eduzz.com/E05XQOYNWX">
-🔥 Quero mudar minha mente agora
+<a class="btn" onclick="trackClick()" href="https://sun.eduzz.com/E05XQOYNWX" target="_blank">
+🔥 Quero destravar minha mente agora
 </a>
 
 </div>
@@ -106,32 +144,33 @@ mas volta pro mesmo padrão.
 <!-- DOR -->
 <div class="card">
 
-<h2>Se você se identifica com isso…</h2>
+<h2>Se isso acontece com você…</h2>
 
 <ul>
 <li>Ansiedade constante</li>
 <li>Autossabotagem</li>
-<li>Falta de resultado financeiro</li>
-<li>Sentir que poderia estar melhor</li>
+<li>Falta de resultados</li>
+<li>Sensação de estar parada</li>
 </ul>
 
 <p>
-👉 então não é falta de esforço…  
+👉 então o problema não é esforço…  
 é padrão mental.
 </p>
 
 </div>
 
-<!-- SOLUÇÃO -->
+<!-- CONCEITO -->
 <div class="card">
 
 <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
 
-<h2>Esse ebook resolve isso</h2>
+<h2>O que você não percebe</h2>
 
 <p>
-Você vai aprender como reprogramar sua mente  
-de forma simples e prática.
+Sua mente repete padrões automaticamente.<br><br>
+
+E isso define seus resultados.
 </p>
 
 </div>
@@ -139,13 +178,15 @@ de forma simples e prática.
 <!-- BENEFÍCIOS -->
 <div class="card">
 
+<img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d">
+
 <h2>O que você vai aprender</h2>
 
 <ul>
 <li>Como parar a autossabotagem</li>
-<li>Como controlar sua mente</li>
+<li>Como controlar seus pensamentos</li>
 <li>Como criar novos hábitos</li>
-<li>Plano de 7 dias</li>
+<li>Plano prático de 7 dias</li>
 </ul>
 
 <a class="btn" onclick="trackClick()" href="https://sun.eduzz.com/E05XQOYNWX">
@@ -154,15 +195,17 @@ Quero começar agora
 
 </div>
 
-<!-- PROVA SOCIAL -->
+<!-- TRANSFORMAÇÃO -->
 <div class="card">
 
-<h2>Resultados que você pode sentir</h2>
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+<h2>O que muda quando você aplica</h2>
 
 <p>
-✔ Mais clareza<br>
-✔ Mais foco<br>
-✔ Mais controle emocional
+✔ Mais clareza mental<br>
+✔ Mais controle emocional<br>
+✔ Mais foco e resultados
 </p>
 
 </div>
@@ -170,7 +213,7 @@ Quero começar agora
 <!-- OFERTA -->
 <div class="card">
 
-<h2>Oferta por tempo limitado</h2>
+<h2>Oferta especial</h2>
 
 <p class="strike">De R$29,90</p>
 <p class="price">Por apenas R$9,99</p>
@@ -201,7 +244,7 @@ Se não gostar, pode pedir reembolso.
 <h2>Última decisão</h2>
 
 <p>
-Se você não mudar… nada muda.<br><br>
+Se nada mudar… tudo continua igual.<br><br>
 
 Mas você pode começar hoje.
 </p>
