@@ -8,6 +8,7 @@
   gtag('js', new Date());
 
   gtag('config', 'AW-18052251950');
+  gtag('config', 'AW-10879526236');
 </script>
 
 
@@ -108,6 +109,24 @@ fbq('track', 'PageView');
 function trackClick(){
   fbq('track', 'InitiateCheckout');
   gtag('event', 'click_compra');
+}
+</script>
+<!-- Event snippet for Compra conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-10879526236/3Mj1CKDo0pIcENzK4cMo',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
 }
 </script>
 
