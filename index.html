@@ -11,22 +11,40 @@ body {
     font-family: Arial, sans-serif;
     background: #0c0c0c;
     color: white;
-    text-align: center;
 }
 
-.container {
+/* HERO */
+.hero {
+    background: url('SUA-IMAGEM.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
     padding: 20px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
-    margin: auto;
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 36px;
     color: #00ffcc;
-}
-
-h2 {
-    color: #ffffff;
+    margin-bottom: 15px;
 }
 
 p {
@@ -34,12 +52,11 @@ p {
     line-height: 1.5;
 }
 
+/* BOTÕES */
 .btn {
-    display: block;
-    margin: 15px auto;
-    padding: 15px;
-    width: 90%;
-    max-width: 400px;
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 25px;
     background: #00ffcc;
     color: black;
     font-weight: bold;
@@ -52,23 +69,36 @@ p {
     color: white;
 }
 
+/* CONTEÚDO */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
 .bonus {
     background: #111;
     padding: 20px;
-    margin-top: 20px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 
+/* WHATSAPP FIXO */
 .whatsapp-fixo {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #25D366;
-    color: white;
     padding: 15px;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 20px;
+    color: white;
+    font-size: 22px;
 }
 </style>
 
@@ -76,51 +106,65 @@ p {
 
 <body>
 
-<div class="container">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
 
-<h1>REPROGRAME SUA MENTE E TRANSFORME SUA VIDA</h1>
+    <h1>
+    O UNIVERSO NÃO É UM JUIZ,<br>
+    É UM ESPELHO.
+    </h1>
 
-<p>Descubra como eliminar bloqueios mentais, vencer a procrastinação e criar uma nova realidade com o poder da sua mente.</p>
+    <p>
+    SUA MENTE CRIA SUA REALIDADE.<br>
+    O QUE VOCÊ REPETE, VOCÊ FORTALECE.
+    </p>
 
-<a href="https://kiwify.app/v2lAkZa?afid=dNOqRKHU" class="btn">
-QUERO ME REPROGRAMAR AGORA
-</a>
+    <a href="https://kiwify.app/v2lAkZa?afid=dNOqRKHU" class="btn">
+    QUERO ME REPROGRAMAR AGORA
+    </a>
 
-<a href="https://wa.me/5515997798218" class="btn btn-whats">
-FALAR NO WHATSAPP
-</a>
+    <a href="https://wa.me/5515997798218" class="btn btn-whats">
+    FALAR NO WHATSAPP
+    </a>
 
-<h2>Você se sente travado?</h2>
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<section class="container">
+
+<h2>VOCÊ SE SENTE TRAVADO?</h2>
 
 <p>
-• Falta de foco<br>
-• Pensamentos negativos<br>
-• Autossabotagem<br>
-• Sensação de não sair do lugar
+FALTA DE FOCO<br>
+PENSAMENTOS NEGATIVOS<br>
+AUTOSSABOTAGEM<br>
+SENSAÇÃO DE NÃO SAIR DO LUGAR
 </p>
 
-<p><strong>O problema não é você… é sua programação mental.</strong></p>
+<p><strong>O PROBLEMA NÃO É VOCÊ. É SUA PROGRAMAÇÃO MENTAL.</strong></p>
 
-<h2>O que você vai aprender:</h2>
+<h2>O QUE VOCÊ VAI APRENDER:</h2>
 
 <p>
-✔ Como reprogramar sua mente<br>
-✔ Criar novos padrões mentais<br>
-✔ Ter clareza e direção<br>
-✔ Ativar seu potencial real
+COMO REPROGRAMAR SUA MENTE<br>
+CRIAR NOVOS PADRÕES<br>
+TER CLAREZA E DIREÇÃO<br>
+ATIVAR SEU POTENCIAL REAL
 </p>
 
 <div class="bonus">
 <h2>🎁 BÔNUS EXCLUSIVO</h2>
 
-<p><strong>Ebook: As 7 Leis Herméticas</strong></p>
+<p><strong>EBOOK: AS 7 LEIS HERMÉTICAS</strong></p>
 
-<p>Você vai entender as leis que governam a realidade e acelerar seus resultados.</p>
+<p>ENTENDA AS LEIS QUE CONTROLAM SUA REALIDADE E ACELERE SUA TRANSFORMAÇÃO.</p>
 </div>
 
-<h2>Decida agora:</h2>
+<h2>A DECISÃO É SUA</h2>
 
-<p>Continuar como está ou transformar sua vida de vez.</p>
+<p>CONTINUAR PRESO OU TRANSFORMAR SUA VIDA AGORA.</p>
 
 <a href="https://kiwify.app/v2lAkZa?afid=dNOqRKHU" class="btn">
 QUERO COMEÇAR AGORA
@@ -130,8 +174,9 @@ QUERO COMEÇAR AGORA
 FALAR COM SUPORTE
 </a>
 
-</div>
+</section>
 
+<!-- BOTÃO FIXO -->
 <a href="https://wa.me/5515997798218" class="whatsapp-fixo">💬</a>
 
 </body>
