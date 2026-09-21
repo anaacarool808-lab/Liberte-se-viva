@@ -45,19 +45,20 @@
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
+      position: relative;
     }
 
-    /* Glows de fundo */
+    /* Glows de fundo sem interceptar cliques */
     .glow {
       position: absolute;
       width: 450px;
       height: 450px;
       border-radius: 50%;
       filter: blur(100px);
-      z-index: 1;
-      pointer-events: none;
+      z-index: 0;
+      pointer-events: none !important;
     }
-    .glow-1 { top: 100px; left: -150px; background: rgba(0, 255, 204, 0.15); }
+    .glow-1 { top: 80px; left: -150px; background: rgba(0, 255, 204, 0.15); }
     .glow-2 { top: 900px; right: -150px; background: rgba(168, 85, 247, 0.15); }
 
     /* HERO */
@@ -71,11 +72,12 @@
       padding: 60px 20px;
       background: linear-gradient(180deg, rgba(9, 13, 22, 0.85) 0%, rgba(9, 13, 22, 0.96) 100%),
                   url('[github.com](https://github.com/anaacarool808-lab/Liberte-se-viva/blob/main/WhatsApp%20Image%202026-04-08%20at%2011.41.51%20(2).jpeg?raw=true)') center/cover no-repeat;
+      z-index: 1;
     }
 
     .hero-content {
       position: relative;
-      z-index: 2;
+      z-index: 5;
       max-width: 820px;
     }
 
@@ -122,6 +124,8 @@
       gap: 16px;
       justify-content: center;
       align-items: center;
+      position: relative;
+      z-index: 10;
     }
 
     .btn {
@@ -135,6 +139,8 @@
       border-radius: 50px;
       transition: all 0.25s ease;
       cursor: pointer;
+      position: relative;
+      z-index: 10;
     }
 
     .btn-primary {
@@ -166,7 +172,7 @@
       margin: auto;
       padding: 60px 20px;
       position: relative;
-      z-index: 2;
+      z-index: 5;
     }
 
     /* CARDS DE CONTEÚDO */
@@ -253,6 +259,8 @@
       padding: 45px 30px;
       text-align: center;
       margin: 40px 0;
+      position: relative;
+      z-index: 5;
     }
 
     .preco-antigo {
@@ -302,8 +310,9 @@
       justify-content: center;
       text-decoration: none;
       box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
-      z-index: 99;
+      z-index: 9999;
       transition: transform 0.2s ease;
+      cursor: pointer;
     }
 
     .whatsapp-fixo:hover {
@@ -322,6 +331,8 @@
       text-align: center;
       color: var(--text-muted);
       font-size: 0.85rem;
+      position: relative;
+      z-index: 5;
     }
   </style>
 </head>
@@ -345,10 +356,10 @@
       </p>
 
       <div class="btn-group">
-        <a href="[pay.kiwify.com.br](https://pay.kiwify.com.br/5qNRQJE)" class="btn btn-primary">
+        <a href="[pay.kiwify.com.br](https://pay.kiwify.com.br/5qNRQJE)" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
           QUERO ME REPROGRAMAR AGORA
         </a>
-        <a href="[wa.me](https://wa.me/5515997798218)" class="btn btn-whats">
+        <a href="[api.whatsapp.com](https://api.whatsapp.com/send?phone=5515997798218&text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20e-book%20Reprograme-se)" class="btn btn-whats" target="_blank" rel="noopener noreferrer">
           FALAR NO WHATSAPP
         </a>
       </div>
@@ -404,13 +415,13 @@
       <p class="preco-aviso">🔥 PROMOÇÃO VÁLIDA SOMENTE HOJE</p>
 
       <div class="btn-group">
-        <a href="[pay.kiwify.com.br](https://pay.kiwify.com.br/5qNRQJE)" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">
+        <a href="[pay.kiwify.com.br](https://pay.kiwify.com.br/5qNRQJE)" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 18px 40px;">
           QUERO COMEÇAR AGORA
         </a>
       </div>
 
-      <div style="margin-top: 18px;">
-        <a href="[wa.me](https://wa.me/5515997798218)" style="color: #94a3b8; text-decoration: underline; font-size: 0.95rem;">
+      <div style="margin-top: 18px; position: relative; z-index: 10;">
+        <a href="[api.whatsapp.com](https://api.whatsapp.com/send?phone=5515997798218&text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20e-book%20Reprograme-se)" target="_blank" rel="noopener noreferrer" style="color: #94a3b8; text-decoration: underline; font-size: 0.95rem;">
           Dúvidas? Fale com o suporte no WhatsApp
         </a>
       </div>
@@ -422,7 +433,7 @@
   </main>
 
   <!-- BOTÃO FIXO WHATSAPP -->
-  <a href="[wa.me](https://wa.me/5515997798218)" class="whatsapp-fixo" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+  <a href="[api.whatsapp.com](https://api.whatsapp.com/send?phone=5515997798218&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es)" class="whatsapp-fixo" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
     <svg viewBox="0 0 24 24">
       <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3"/>
     </svg>
