@@ -1,235 +1,435 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="[googletagmanager.com](https://www.googletagmanager.com/gtag/js?id=G-D821D9JCR0)"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D821D9JCR0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    gtag('config', 'G-D821D9JCR0');
+  </script>
 
-  gtag('config', 'G-D821D9JCR0');
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reprograme-se 🧠 | Liberte-se & Viva</title>
 
-    
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reprograme-se 🧠</title>
+  <!-- Fonte Moderna -->
+  <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap)" rel="stylesheet">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0c0c0c;
-    color: white;
-}
+  <style>
+    :root {
+      --primary: #00ffcc;
+      --primary-dark: #00c9a1;
+      --accent: #a855f7;
+      --whats: #25D366;
+      --bg: #090d16;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
 
-/* HERO */
-.hero {
-    background: url('https://github.com/anaacarool808-lab/Liberte-se-viva/blob/main/WhatsApp%20Image%202026-04-08%20at%2011.41.51%20(2).jpeg?raw=true') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 20px;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
-    top: 0;
-    left: 0;
-}
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-}
+    /* Glows de fundo */
+    .glow {
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .glow-1 { top: 100px; left: -150px; background: rgba(0, 255, 204, 0.15); }
+    .glow-2 { top: 900px; right: -150px; background: rgba(168, 85, 247, 0.15); }
 
-h1 {
-    font-size: 36px;
-    color: #00ffcc;
-    margin-bottom: 15px;
-}
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, rgba(9, 13, 22, 0.85) 0%, rgba(9, 13, 22, 0.96) 100%),
+                  url('[github.com](https://github.com/anaacarool808-lab/Liberte-se-viva/blob/main/WhatsApp%20Image%202026-04-08%20at%2011.41.51%20(2).jpeg?raw=true)') center/cover no-repeat;
+    }
 
-p {
-    font-size: 18px;
-    line-height: 1.5;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
 
-/* BOTÕES */
-.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 25px;
-    background: #00ffcc;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-}
+    .tag-hero {
+      display: inline-block;
+      padding: 7px 18px;
+      border-radius: 999px;
+      background: rgba(0, 255, 204, 0.1);
+      border: 1px solid rgba(0, 255, 204, 0.3);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
 
-.btn-whats {
-    background: #25D366;
-    color: white;
-}
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
 
-/* CONTEÚDO */
-.container {
-    max-width: 800px;
-    margin: auto;
-    padding: 30px 20px;
-    text-align: center;
-}
+    .hero h1 span {
+      background: linear-gradient(135deg, #00ffcc, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-h2 {
-    margin-top: 30px;
-}
-.bonus {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
+    .hero p {
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+    }
 
-/* WHATSAPP FIXO */
-.whatsapp-fixo {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
-}
+    /* BOTÕES */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 34px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00ffcc, #00b4d8);
+      color: #041014;
+      box-shadow: 0 10px 25px -5px rgba(0, 255, 204, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px -5px rgba(0, 255, 204, 0.6);
+    }
+
+    .btn-whats {
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #4ade80;
+    }
+
+    .btn-whats:hover {
+      background: var(--whats);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* CONTAINER PRINCIPAL */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* CARDS DE CONTEÚDO */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(14px);
+      border-radius: 24px;
+      padding: 36px 30px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    .highlight-red {
+      color: #f87171;
+    }
+
+    .highlight-green {
+      color: var(--primary);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 24px 0 16px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .pill-negative {
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+    }
+
+    .pill-positive {
+      border-color: rgba(0, 255, 204, 0.3);
+      color: #a7f3d0;
+    }
+
+    /* CARD DE BÔNUS */
+    .bonus-card {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(0, 255, 204, 0.08));
+      border: 1px solid rgba(168, 85, 247, 0.35);
+      border-radius: 24px;
+      padding: 40px 30px;
+      margin: 40px 0;
+      text-align: center;
+      box-shadow: 0 15px 35px -10px rgba(168, 85, 247, 0.2);
+    }
+
+    .bonus-tag {
+      display: inline-block;
+      background: #a855f7;
+      color: white;
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* OFERTA & PREÇO */
+    .pricing-card {
+      background: linear-gradient(180deg, rgba(0, 255, 204, 0.06), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(0, 255, 204, 0.3);
+      border-radius: 28px;
+      padding: 45px 30px;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .preco-antigo {
+      text-decoration: line-through;
+      color: #64748b;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .preco-novo {
+      font-size: clamp(2.8rem, 6vw, 4rem);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 12px;
+      text-shadow: 0 0 35px rgba(0, 255, 204, 0.35);
+    }
+
+    .preco-aviso {
+      color: #fb7185;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
     .img-secao {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
-    margin: 25px auto;
-    display: block;
-}
-preco {
-    margin: 30px 0;
-}
+      width: 100%;
+      max-width: 620px;
+      border-radius: 20px;
+      margin: 35px auto 10px;
+      display: block;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+    }
 
-.preco-antigo {
-    text-decoration: line-through;
-    color: #888;
-    font-size: 18px;
-}
+    /* BOTÃO FIXO WHATSAPP */
+    .whatsapp-fixo {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+      z-index: 99;
+      transition: transform 0.2s ease;
+    }
 
-.preco-novo {
-    color: #00ffcc;
-    font-size: 36px;
-    font-weight: bold;
-}
+    .whatsapp-fixo:hover {
+      transform: scale(1.1);
+    }
 
-.preco-aviso {
-    color: #ff4444;
-    font-size: 16px;
-}
+    .whatsapp-fixo svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
 
-</style>
-    
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 30px 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
-    
+
 <body>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-      
-    <h1>
-    O UNIVERSO NÃO É UM JUIZ,<br>
-    É UM ESPELHO.
-    </h1>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="tag-hero">Liberte-se &amp; Viva</div>
+      <h1>
+        O UNIVERSO NÃO É UM JUIZ,<br>
+        <span>É UM ESPELHO.</span>
+      </h1>
 
-    <p>
-    SUA MENTE CRIA SUA REALIDADE.<br>
-    O QUE VOCÊ REPETE, VOCÊ FORTALECE.
-    </p>
+      <p>
+        Sua mente cria sua realidade.<br>
+        O que você repete, você fortalece.
+      </p>
 
-    <a href="https://pay.kiwify.com.br/5qNRQJE" class="btn">
-    QUERO ME REPROGRAMAR AGORA
-    </a>
+      <div class="btn-group">
+        <a href="[pay.kiwify.com.br](https://pay.kiwify.com.br/5qNRQJE)" class="btn btn-primary">
+          QUERO ME REPROGRAMAR AGORA
+        </a>
+        <a href="[wa.me](https://wa.me/5515997798218)" class="btn btn-whats">
+          FALAR NO WHATSAPP
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://wa.me/5515997798218" class="btn btn-whats">
-    FALAR NO WHATSAPP
-    </a>
-
-  </div>
-</section>
-
-<!-- CONTEÚDO -->
-<section class="container">
-
-<h2>VOCÊ SE SENTE TRAVADO?</h2>
-
-<p>
-FALTA DE FOCO<br>
-PENSAMENTOS NEGATIVOS<br>
-AUTOSSABOTAGEM<br>
-SENSAÇÃO DE NÃO SAIR DO LUGAR
-</p>
-
-<p><strong>O PROBLEMA NÃO É VOCÊ. É SUA PROGRAMAÇÃO MENTAL.</strong></p>
-
-<h2>O QUE VOCÊ VAI APRENDER:</h2>
-
-<p>
-COMO REPROGRAMAR SUA MENTE<br>
-CRIAR NOVOS PADRÕES<br>
-TER CLAREZA E DIREÇÃO<br>
-ATIVAR SEU POTENCIAL REAL
-</p>
-
-<div class="bonus">
-<h2>🎁 BÔNUS EXCLUSIVO PARA QUEM ADQUIRIR AGORA O E-BOOK REPROGRAME-SE 🎁</h2>
-
-<p><strong>📖 EBOOK: AS 7 LEIS HERMÉTICAS 📜</strong></p>
-
-<p>📍 ENTENDA AS LEIS QUE GOVERNAM O MUNDO E CONTROLAM SUA REALIDADE. COM ESSE CONHECIMENTO VOCÊ ACELERA AGORA MESMO SUA TRANSFORMAÇÃO.</p>
-</div>
-
-       <h2>A DECISÃO É SUA</h2>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container">
     
-    <div class="preco">
-    <p class="preco-antigo">DE R$ 29,99</p>
-    <p class="preco-novo">POR APENAS R$ 9,99</p>
-    <p class="preco-aviso">🔥 PROMOÇÃO VÁLIDA SOMENTE HOJE</p>
-</div>
+    <!-- PROBLEMA -->
+    <section class="section-card">
+      <h2 class="highlight-red">VOCÊ SE SENTE TRAVADO?</h2>
+      <div class="pill-list">
+        <span class="pill pill-negative">❌ Falta de Foco</span>
+        <span class="pill pill-negative">❌ Pensamentos Negativos</span>
+        <span class="pill pill-negative">❌ Autossabotagem</span>
+        <span class="pill pill-negative">❌ Sensação de Estagnação</span>
+      </div>
+      <p style="margin-top: 20px; font-size: 1.1rem; color: #e2e8f0;">
+        <strong>O problema não é você. É a sua programação mental.</strong>
+      </p>
+    </section>
 
-    <p>CONTINUAR PRESO OU TRANSFORMAR SUA VIDA AGORA.</p>
-    
+    <!-- APRENDIZADO -->
+    <section class="section-card">
+      <h2 class="highlight-green">O QUE VOCÊ VAI APRENDER</h2>
+      <div class="pill-list">
+        <span class="pill pill-positive">✔ Como Reprogramar Sua Mente</span>
+        <span class="pill pill-positive">✔ Criar Novos Padrões de Sucesso</span>
+        <span class="pill pill-positive">✔ Conquistar Clareza e Direção</span>
+        <span class="pill pill-positive">✔ Ativar Seu Potencial Real</span>
+      </div>
+    </section>
 
-<h2>SUA MUDANÇA COMEÇA AGORA</h2>
+    <!-- BÔNUS -->
+    <section class="bonus-card">
+      <div class="bonus-tag">🎁 Bônus Exclusivo</div>
+      <h2>EBOOK: AS 7 LEIS HERMÉTICAS 📜</h2>
+      <p style="max-width: 650px; margin: 15px auto 0; color: #e2e8f0; font-size: 1.05rem;">
+        Entenda as leis que governam o mundo e controlam sua realidade. Com esse conhecimento em mãos, você acelera imediatamente sua virada de chave e transformação.
+      </p>
+    </section>
 
-<p>CHEGA DE CONTINUAR PRESO É HORA DE TRANSFORMAR SUA VIDA.</p>
+    <!-- OFERTA / PREÇO -->
+    <section class="pricing-card">
+      <h2>A DECISÃO É SUA</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">
+        Continuar preso aos mesmos ciclos ou transformar sua vida hoje mesmo?
+      </p>
 
-<a href="https://pay.kiwify.com.br/5qNRQJE" class="btn">
-QUERO COMEÇAR AGORA
-</a>
+      <p class="preco-antigo">DE R$ 29,99</p>
+      <p class="preco-novo">R$ 9,99</p>
+      <p class="preco-aviso">🔥 PROMOÇÃO VÁLIDA SOMENTE HOJE</p>
 
-<a href="https://wa.me/5515997798218" class="btn btn-whats">
-FALAR COM SUPORTE
-</a>
+      <div class="btn-group">
+        <a href="[pay.kiwify.com.br](https://pay.kiwify.com.br/5qNRQJE)" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">
+          QUERO COMEÇAR AGORA
+        </a>
+      </div>
 
-    <img src="https://github.com/anaacarool808-lab/Liberte-se-viva/blob/main/WhatsApp%20Image%202026-04-08%20at%2011.41.50.jpeg?raw=true" class="img-secao">
+      <div style="margin-top: 18px;">
+        <a href="[wa.me](https://wa.me/5515997798218)" style="color: #94a3b8; text-decoration: underline; font-size: 0.95rem;">
+          Dúvidas? Fale com o suporte no WhatsApp
+        </a>
+      </div>
 
-</section>
+      <!-- Imagem Original da Seção -->
+      <img src="[github.com](https://github.com/anaacarool808-lab/Liberte-se-viva/blob/main/WhatsApp%20Image%202026-04-08%20at%2011.41.50.jpeg?raw=true)" alt="Reprograme-se" class="img-secao">
+    </section>
 
-<!-- BOTÃO FIXO -->
-<a href="https://wa.me/5515997798218" class="whatsapp-fixo">💬</a>
+  </main>
 
+  <!-- BOTÃO FIXO WHATSAPP -->
+  <a href="[wa.me](https://wa.me/5515997798218)" class="whatsapp-fixo" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.3"/>
+    </svg>
+  </a>
+
+  <footer>
+    <p>&copy; 2026 Liberte-se &amp; Viva. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
